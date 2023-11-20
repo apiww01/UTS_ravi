@@ -1,0 +1,73 @@
+<!---Ravi Rizki Ramdhani-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Grosir Sembako Sederhana</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h2>MyGrosir</h2>
+    <form id="grosirForm">
+        <label for="type">Nama Barang:</label><br>
+        <select id="type" name="type">
+            <option></option>
+            <option value="Beras">Beras</option>
+            <option value="Minyak Goreng">Minyak Goreng</option>
+            <option value="Kecap">Kecap</option>
+            <option value="Gula">Gula</option>
+            <option value="Susu">Susu </option>
+            <option value="Kopi">Kopi</option>
+            <option value="Teh">Teh</option>
+            <option value="Mentega">Mentega</option>
+            <option value="Telur">Telur</option>
+            <option value="Garam">Garam</option>
+        </select><br>
+
+        <label for="harga">Harga:</label><br>
+        <input type="number" id="harga" name="harga" min="1" required><br>
+
+        <label for="jumlah_barang">Jumlah Barang:</label><br>
+        <input type="number" id="jumlah_barang" name="jumlah_barang" min="1" required><br>
+
+        <label for="diskon">Diskon:</label><br>
+        <input type="number" id="diskon" name="diskon" min="0" required><br>
+
+        <button type="submit" class="btn btn-primary">Hitung</button>
+        <button type="reset"class="btn btn-primary">Reset</button>
+    </form>
+
+    <h3>Tabel Invoice Grosir Sembako</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Barang</th>
+                <th>Jumlah</th>
+                <th>Diskon</th>
+                <th>Total Biaya</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="GrosirTableBody">
+        </tbody>
+    </table>
+    <div id="splash">
+        <img alt="" class="logo" src="assets/images/icon.png" />
+      </div>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/register.js"></script>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById('splash').classList.add('fade'); // Change toggle to add
+            }, 2000);
+        });
+    </script>
+    <button id="installButton" style="display:none;">Install App</button>
+
+</body>
+</html>
